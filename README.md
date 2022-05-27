@@ -11,4 +11,7 @@ To enable auditd logs on CentOS 7 and configure it to monitor for shutdown and r
 ./auditd_rules.sh
 ```
 
-
+To get a list of shutdown and reboot events and their source, afterwards you can run
+```
+sudo ausearch -i -m system_boot,system_shutdown | tail -4
+```
